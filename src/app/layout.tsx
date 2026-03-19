@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" className="dark">
-			<body className="min-h-dvh bg-spotify-black text-white antialiased">
+			<body className="min-h-dvh bg-spotify-black text-white antialiased no-page-scrollbar overflow-x-hidden">
 				<Navigation />
 				{children}
 			</body>

@@ -12,7 +12,7 @@ import {
 export default function ExperienceSection() {
 	return (
 		<section
-			className="bg-[#212121] rounded-2xl overflow-hidden h-full flex flex-col"
+			className="bg-[#212121] rounded-2xl overflow-hidden h-full lg:max-h-[78vh] flex flex-col"
 			id="experience"
 		>
 			<div className="bg-[#535353] px-6 py-4">
@@ -76,7 +76,7 @@ export default function ExperienceSection() {
 						key={`${e.company}-${e.role}`}
 						className="flex items-start gap-4 p-3 rounded-lg hover:bg-[#282828] transition-colors group"
 					>
-						<span className="text-[#B3B3B3] group-hover:text-white min-w-[20px] text-sm pt-0.5">
+						<span className="text-[#B3B3B3] group-hover:text-white min-w-5 text-sm pt-0.5">
 							{index + 1}
 						</span>
 						<div className="flex-1 min-w-0">

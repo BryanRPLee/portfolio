@@ -35,7 +35,7 @@ export default function SkillsSection() {
 				<div
 					className="flex gap-6 w-max"
 					style={{
-						animation: 'scroll-x 30s linear infinite'
+						animation: 'scroll-x 24s linear infinite'
 					}}
 				>
 					{allSkills.map((skill, i) => (
@@ -66,7 +66,7 @@ export default function SkillsSection() {
 						transform: translateX(0);
 					}
 					to {
-						transform: translateX(-50%);
+						transform: translateX(calc(-50% - 0.75rem));
 					}
 				}
 			`}</style>

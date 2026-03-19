@@ -4,7 +4,7 @@ import { ExternalLink, ChevronDown } from 'lucide-react'
 export default function ProjectsSection() {
 	return (
 		<div
-			className="bg-[#212121] rounded-2xl overflow-hidden h-full flex flex-col"
+			className="bg-[#212121] rounded-2xl overflow-hidden h-full lg:max-h-[78vh] flex flex-col"
 			id="projects"
 		>
 			<div className="p-4 flex gap-3 flex-wrap">

@@ -3,7 +3,7 @@ import { site } from '@/app/data/site'
 
 export default function ProfileCard() {
 	return (
-		<div className="bg-[#212121] rounded-2xl p-5 h-full flex flex-col gap-6">
+		<div className="bg-[#212121] rounded-2xl p-5 h-full lg:max-h-[78vh] overflow-hidden flex flex-col gap-6">
 			<div className="flex justify-center">
 				<div className="relative w-36 h-36 rounded-2xl overflow-hidden border-2 border-[#1DB954] shadow-lg shadow-[#1DB954]/20">
 					<Image
@@ -25,7 +25,7 @@ export default function ProfileCard() {
 				<p className="text-[#535353] text-xs">{site.location}</p>
 			</div>
 
-			<div className="space-y-3 text-sm text-[#B3B3B3] leading-6">
+			<div className="space-y-3 text-sm text-[#B3B3B3] leading-6 flex-1 min-h-0 overflow-y-auto pr-1">
 				{site.summary.map((line) => (
 					<p key={line}>{line}</p>
 				))}
