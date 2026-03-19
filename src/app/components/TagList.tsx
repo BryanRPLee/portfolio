@@ -4,7 +4,7 @@ export function TagList(props: { items: string[] }) {
 			{props.items.map((t) => (
 				<li
 					key={t}
-					className="rounded-full border border-zinc-700 bg-zinc-900 px-3 py-1 text-sm text-zinc-300 transition-colors hover:border-emerald-500 hover:text-emerald-400"
+					className="rounded-full border border-[#535353] bg-[#282828] px-3 py-1 text-sm text-[#B3B3B3] transition-colors hover:border-[#1DB954] hover:text-[#1DB954] cursor-default"
 				>
 					{t}
 				</li>

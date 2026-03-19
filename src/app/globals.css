@@ -1,11 +1,75 @@
 @import 'tailwindcss';
 
+html {
+	scroll-behavior: smooth;
+}
+
 :root {
-  color-scheme: dark;
+	color-scheme: dark;
+}
+
+@layer utilities {
+	.bg-spotify-green {
+		background-color: #1db954;
+	}
+	.bg-spotify-dark-green {
+		background-color: #189a45;
+	}
+	.bg-spotify-black {
+		background-color: #121212;
+	}
+	.bg-spotify-light-dark {
+		background-color: #212121;
+	}
+	.bg-spotify-gray {
+		background-color: #535353;
+	}
+	.bg-spotify-gray-hover {
+		background-color: #323131;
+	}
+
+	.text-spotify-green {
+		color: #1db954;
+	}
+	.text-spotify-black {
+		color: #121212;
+	}
+	.text-spotify-gray {
+		color: #535353;
+	}
+	.text-spotify-light-gray {
+		color: #b3b3b3;
+	}
+	.text-spotify-white {
+		color: #ffffff;
+	}
+
+	.border-spotify-green {
+		border-color: #1db954;
+	}
 }
 
 body {
-  background-image: radial-gradient(circle at top left, rgb(24 24 27 / 0.85), rgb(0 0 0));
-  -webkit-user-select: none;
-  user-select: none;
+	background-color: #121212;
+	color: #ffffff;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+::-webkit-scrollbar-track {
+	background: #1a1a1a;
+}
+::-webkit-scrollbar-thumb {
+	background-color: #444;
+	border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color: #555;
+}
+* {
+	scrollbar-width: thin;
+	scrollbar-color: #444 #1a1a1a;
 }
