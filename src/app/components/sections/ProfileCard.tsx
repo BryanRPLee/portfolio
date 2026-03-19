@@ -9,8 +9,8 @@ const playlistLinks = [
 		sublabel: site.email,
 		href: `mailto:${site.email}`,
 		Icon: Mail,
-		color: '#1DB954',
-		textColor: '#000',
+		photo: '/icons/email.jpg',
+		iconColor: '#fff',
 		external: false
 	},
 	{
@@ -18,8 +18,8 @@ const playlistLinks = [
 		sublabel: 'BryanRPLee',
 		href: site.links.github,
 		Icon: Github,
-		color: '#333',
-		textColor: '#fff',
+		photo: '/icons/github.jpg',
+		iconColor: '#fff',
 		external: true
 	},
 	{
@@ -27,8 +27,8 @@ const playlistLinks = [
 		sublabel: 'bryanrplee',
 		href: site.links.linkedin,
 		Icon: Linkedin,
-		color: '#0A66C2',
-		textColor: '#fff',
+		photo: '/icons/linkedin.jpg',
+		iconColor: '#fff',
 		external: true
 	}
 ]
@@ -90,8 +90,8 @@ export default function ProfileCard() {
 								sublabel,
 								href,
 								Icon,
-								color,
-								textColor,
+								photo,
+								iconColor,
 								external
 							}) => (
 								<a
@@ -105,22 +105,31 @@ export default function ProfileCard() {
 										: {})}
 									className="group relative rounded-lg overflow-hidden shadow-lg aspect-square block"
 								>
-									{/* Cover background */}
-									<div
-										className="absolute inset-0 flex items-center justify-center transition-transform duration-300 group-hover:scale-105"
-										style={{ backgroundColor: color }}
-									>
+									{/* Scenic photo background */}
+									<Image
+										src={photo}
+										alt={label}
+										fill
+										sizes="150px"
+										className="object-cover transition-transform duration-300 group-hover:scale-105"
+									/>
+
+									{/* Dark overlay */}
+									<div className="absolute inset-0 bg-black/30" />
+
+									{/* Icon overlay centered */}
+									<div className="absolute inset-0 flex items-center justify-center">
 										<Icon
-											className="w-10 h-10 opacity-30"
-											style={{ color: textColor }}
+											className="w-8 h-8 drop-shadow-lg"
+											style={{
+												color: iconColor,
+												opacity: 0.9
+											}}
 										/>
 									</div>
 
 									{/* Label overlay at bottom */}
-									<div className="absolute bottom-0 inset-x-0 p-2 bg-linear-to-t from-black/70 to-transparent">
-										<p className="text-white text-[10px] font-bold leading-tight truncate">
-											{label}
-										</p>
+									<div className="absolute bottom-0 inset-x-0 p-2 bg-linear-to-t from-black/80 to-transparent">
 										<p className="text-white/60 text-[9px] truncate">
 											{sublabel}
 										</p>

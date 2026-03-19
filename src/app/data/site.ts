@@ -1,10 +1,10 @@
 export const site = {
 	name: 'Bryan Lee',
-	title: 'Associate Software Engineer @ WiseTech Global | CS @ UTS',
+	title: 'Software Engineer | Ex-WiseTech | CS @ UTS',
 	location: 'Sydney, NSW, Australia',
 	email: 'bryanrplee@gmail.com',
 	phone: '0435 157 931',
-	profileImage: '/profile.png',
+	profileImage: '/icons/profile.png',
 	profileImageAlt: 'Bryan Lee profile photo',
 	links: {
 		github: 'https://github.com/BryanRPLee',
