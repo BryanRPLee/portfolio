@@ -29,12 +29,15 @@ export default function ExperienceSection() {
 
 			<div className="px-4 py-3 flex items-center justify-between">
 				<div className="flex items-center gap-4">
-					<button
+					<a
+						href="https://www.linkedin.com/in/bryanrplee/#experience"
+						target="_blank"
+						rel="noreferrer"
 						className="rounded-full bg-[#1DB954] p-3 hover:scale-110 transition-transform shadow-lg"
-						aria-label="Play experience showcase"
+						aria-label="View experience on LinkedIn"
 					>
 						<Play className="w-4 h-4 text-black fill-black" />
-					</button>
+					</a>
 					<div className="flex items-center gap-4">
 						<button
 							aria-label="Shuffle"
