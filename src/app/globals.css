@@ -78,6 +78,15 @@ body.no-page-scrollbar::-webkit-scrollbar {
 ::-webkit-scrollbar-thumb:hover {
 	background-color: #555;
 }
+
+@keyframes scroll-x {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(calc(-50% - 0.75rem));
+	}
+}
 * {
 	scrollbar-width: thin;
 	scrollbar-color: #444 #1a1a1a;

@@ -1,5 +1,5 @@
 import { projects } from '@/app/data/resume'
-import { ExternalLink, ChevronDown } from 'lucide-react'
+import { ExternalLink, ArrowDown } from 'lucide-react'
 
 export default function ProjectsSection() {
 	return (
@@ -8,13 +8,10 @@ export default function ProjectsSection() {
 			id="projects"
 		>
 			<div className="p-4 flex gap-3 flex-wrap">
-				<button
-					className="flex items-center gap-2 text-sm font-bold bg-[#1DB954] hover:bg-[#189a45] hover:scale-105 px-5 py-2 rounded-full transition-all text-black"
-					aria-label="Featured projects"
-				>
+				<div className="flex items-center gap-2 text-sm font-bold bg-[#1DB954] px-5 py-2 rounded-full text-black select-none">
 					Featured Projects
-					<ChevronDown className="w-4 h-4" />
-				</button>
+					<ArrowDown className="w-4 h-4" strokeWidth={2.5} />
+				</div>
 				<a
 					href={`https://github.com/${projects[0]?.links?.[0]?.href.split('github.com/')[1]?.split('/')[0]}`}
 					target="_blank"

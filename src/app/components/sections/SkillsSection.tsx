@@ -28,14 +28,14 @@ export default function SkillsSection() {
 		>
 			<h2 className="text-xl font-semibold mb-4">Skills</h2>
 
-			<div className="relative overflow-hidden">
-				<div className="absolute inset-y-0 left-0 w-12 bg-linear-to-r from-[#212121] to-transparent z-10 pointer-events-none" />
-				<div className="absolute inset-y-0 right-0 w-12 bg-linear-to-l from-[#212121] to-transparent z-10 pointer-events-none" />
+			<div className="relative overflow-hidden group">
+				<div className="absolute inset-y-0 left-0 w-16 bg-linear-to-r from-[#212121] to-transparent z-10 pointer-events-none" />
+				<div className="absolute inset-y-0 right-0 w-16 bg-linear-to-l from-[#212121] to-transparent z-10 pointer-events-none" />
 
 				<div
-					className="flex gap-6 w-max"
+					className="flex gap-6 w-max will-change-transform group-hover:[animation-play-state:paused]"
 					style={{
-						animation: 'scroll-x 24s linear infinite'
+						animation: 'scroll-x 28s linear infinite'
 					}}
 				>
 					{allSkills.map((skill, i) => (
@@ -59,17 +59,6 @@ export default function SkillsSection() {
 					))}
 				</div>
 			</div>
-
-			<style jsx>{`
-				@keyframes scroll-x {
-					from {
-						transform: translateX(0);
-					}
-					to {
-						transform: translateX(calc(-50% - 0.75rem));
-					}
-				}
-			`}</style>
 		</div>
 	)
 }

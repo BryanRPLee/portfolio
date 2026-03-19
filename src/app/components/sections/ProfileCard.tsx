@@ -1,16 +1,17 @@
 import Image from 'next/image'
 import { site } from '@/app/data/site'
+import TypewriterText from '@/app/components/TypewriterText'
 
 export default function ProfileCard() {
 	return (
 		<div className="bg-[#212121] rounded-2xl p-5 h-full lg:max-h-[78vh] overflow-hidden flex flex-col gap-6">
 			<div className="flex justify-center">
-				<div className="relative w-36 h-36 rounded-2xl overflow-hidden border-2 border-[#1DB954] shadow-lg shadow-[#1DB954]/20">
+				<div className="relative w-56 h-56 rounded-2xl overflow-hidden border-2 border-[#1DB954] shadow-lg shadow-[#1DB954]/20">
 					<Image
 						src={site.profileImage}
 						alt={site.profileImageAlt}
 						fill
-						sizes="144px"
+						sizes="224px"
 						className="object-cover"
 						priority
 					/>
@@ -20,7 +21,7 @@ export default function ProfileCard() {
 			<div className="text-center space-y-1">
 				<h1 className="text-2xl font-bold text-white">{site.name}</h1>
 				<p className="text-[#B3B3B3] text-sm leading-snug">
-					{site.title}
+					<TypewriterText text={site.title} />
 				</p>
 				<p className="text-[#535353] text-xs">{site.location}</p>
 			</div>
