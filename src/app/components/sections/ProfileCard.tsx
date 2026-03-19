@@ -1,11 +1,12 @@
 import Image from 'next/image'
-import { Play, Mail, Github, Linkedin } from 'lucide-react'
+import { Play, Mail, Github, Linkedin, ArrowDown } from 'lucide-react'
 import { site } from '@/app/data/site'
 import TypewriterText from '@/app/components/TypewriterText'
 
 const playlistLinks = [
 	{
 		label: 'Email Me',
+		playlistName: 'Inbox Vibes',
 		sublabel: site.email,
 		href: `mailto:${site.email}`,
 		Icon: Mail,
@@ -15,6 +16,7 @@ const playlistLinks = [
 	},
 	{
 		label: 'GitHub',
+		playlistName: 'Commit Nights',
 		sublabel: 'BryanRPLee',
 		href: site.links.github,
 		Icon: Github,
@@ -24,6 +26,7 @@ const playlistLinks = [
 	},
 	{
 		label: 'LinkedIn',
+		playlistName: 'Career Mix',
 		sublabel: 'bryanrplee',
 		href: site.links.linkedin,
 		Icon: Linkedin,
@@ -87,6 +90,7 @@ export default function ProfileCard() {
 						{playlistLinks.map(
 							({
 								label,
+								playlistName,
 								sublabel,
 								href,
 								Icon,
@@ -103,43 +107,49 @@ export default function ProfileCard() {
 												rel: 'noreferrer'
 											}
 										: {})}
-									className="group relative rounded-lg overflow-hidden shadow-lg aspect-square block"
+									className="group block min-w-0"
 								>
-									{/* Scenic photo background */}
-									<Image
-										src={photo}
-										alt={label}
-										fill
-										sizes="150px"
-										className="object-cover transition-transform duration-300 group-hover:scale-105"
-									/>
-
-									{/* Dark overlay */}
-									<div className="absolute inset-0 bg-black/30" />
-
-									{/* Icon overlay centered */}
-									<div className="absolute inset-0 flex items-center justify-center">
-										<Icon
-											className="w-8 h-8 drop-shadow-lg"
-											style={{
-												color: iconColor,
-												opacity: 0.9
-											}}
+									<div className="relative rounded-lg overflow-hidden shadow-lg aspect-square">
+										{/* Scenic photo background */}
+										<Image
+											src={photo}
+											alt={label}
+											fill
+											sizes="150px"
+											className="object-cover transition-transform duration-300 group-hover:scale-105"
 										/>
-									</div>
 
-									{/* Label overlay at bottom */}
-									<div className="absolute bottom-0 inset-x-0 p-2 bg-linear-to-t from-black/80 to-transparent">
-										<p className="text-white/60 text-[9px] truncate">
-											{sublabel}
-										</p>
-									</div>
+										{/* Dark overlay */}
+										<div className="absolute inset-0 bg-black/30" />
 
-									{/* Play button on hover */}
-									<div className="absolute bottom-8 right-2 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200">
-										<div className="bg-[#1DB954] rounded-full p-2 shadow-lg shadow-black/50">
-											<Play className="w-4 h-4 text-black fill-black" />
+										{/* Icon overlay centered */}
+										<div className="absolute inset-0 flex items-center justify-center">
+											<Icon
+												className="w-8 h-8 drop-shadow-lg"
+												style={{
+													color: iconColor,
+													opacity: 0.9
+												}}
+											/>
 										</div>
+
+										{/* Play button on hover */}
+										<div className="absolute bottom-2 right-2 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-200">
+											<div className="bg-[#1DB954] rounded-full p-2 shadow-lg shadow-black/50">
+												<Play className="w-4 h-4 text-black fill-black" />
+											</div>
+										</div>
+									</div>
+									<p className="mt-2 text-white text-xs font-semibold truncate">
+										{playlistName}
+									</p>
+									<div className="mt-0.5 flex items-center justify-between gap-2">
+										<p className="text-[#B3B3B3] text-[10px] truncate">
+											By Bryan
+										</p>
+										<span className="shrink-0 rounded-full bg-[#1DB954] p-1">
+											<ArrowDown className="w-3 h-3 text-black" />
+										</span>
 									</div>
 								</a>
 							)
