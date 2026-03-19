@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import { site } from '@/app/data/site'
 import Navigation from '@/app/components/Navigation'
+import ThemeToggle from '@/app/components/ThemeToggle'
 
 export const metadata: Metadata = {
 	title: site.name,
@@ -14,10 +15,18 @@ export default function RootLayout({
 	children: React.ReactNode
 }) {
 	return (
-		<html lang="en" className="dark">
+		<html lang="en">
+			<head>
+				<script
+					dangerouslySetInnerHTML={{
+						__html: `(function(){var t=localStorage.getItem('theme');var d=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(t===null&&d)){document.documentElement.classList.add('dark');}})();`
+					}}
+				/>
+			</head>
 			<body className="min-h-dvh bg-spotify-black text-white antialiased no-page-scrollbar overflow-x-hidden">
 				<Navigation />
 				{children}
+				<ThemeToggle />
 			</body>
 		</html>
 	)

@@ -5,7 +5,7 @@ export const site = {
 	email: 'bryanrplee@gmail.com',
 	phone: '0435 157 931',
 	profileImage: '/icons/profile.png',
-	profileImageAlt: 'Bryan Lee profile photo',
+	profileImageAlt: 'Profile Picture',
 	links: {
 		github: 'https://github.com/BryanRPLee',
 		linkedin: 'https://www.linkedin.com/in/bryanrplee/'

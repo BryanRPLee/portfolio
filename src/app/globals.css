@@ -6,6 +6,11 @@ html {
 
 :root {
 	color-scheme: dark;
+	--card-bg: #212121;
+}
+
+html:not(.dark) {
+	--card-bg: #ffffff;
 }
 
 @layer utilities {
@@ -90,4 +95,64 @@ body.no-page-scrollbar::-webkit-scrollbar {
 * {
 	scrollbar-width: thin;
 	scrollbar-color: #444 #1a1a1a;
+}
+
+/* ── Light mode overrides ── */
+html:not(.dark) body {
+	background-color: #f0f0f0;
+	color: #121212;
+}
+
+html:not(.dark) * {
+	scrollbar-color: #bbb #e8e8e8;
+}
+
+/* Card surfaces */
+html:not(.dark) [class*='bg-[#212121]'] {
+	background-color: #ffffff !important;
+}
+html:not(.dark) [class*='bg-[#282828]'] {
+	background-color: #f5f5f5 !important;
+}
+html:not(.dark) [class*='bg-[#323131]'],
+html:not(.dark) [class*='bg-[#535353]'] {
+	background-color: #e8e8e8 !important;
+}
+
+/* Text */
+html:not(.dark) .text-white {
+	color: #121212 !important;
+}
+html:not(.dark) [class*='text-[#B3B3B3]'] {
+	color: #555555 !important;
+}
+html:not(.dark) [class*='text-[#535353]'] {
+	color: #888888 !important;
+}
+html:not(.dark) [class*='text-white/60'] {
+	color: rgba(18, 18, 18, 0.6) !important;
+}
+
+/* Borders */
+html:not(.dark) [class*='border-[#535353]'] {
+	border-color: #cccccc !important;
+}
+html:not(.dark) [class*='border-[#333]'] {
+	border-color: #e0e0e0 !important;
+}
+html:not(.dark) [class*='border-[#727272]'] {
+	border-color: #bbbbbb !important;
+}
+
+/* Navigation pill */
+html:not(.dark) nav [class*='bg-[#212121]'] {
+	background-color: #ffffff !important;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile card gradient header */
+html:not(.dark) [class*='from-[#1a3d28]'] {
+	--tw-gradient-from: #d4ede0 !important;
+	--tw-gradient-via: #e8f5ee !important;
+	--tw-gradient-to: #f0f0f0 !important;
 }

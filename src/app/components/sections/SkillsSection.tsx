@@ -29,8 +29,20 @@ export default function SkillsSection() {
 			<h2 className="text-xl font-semibold mb-4">Skills</h2>
 
 			<div className="relative overflow-hidden group">
-				<div className="absolute inset-y-0 left-0 w-16 bg-linear-to-r from-[#212121] to-transparent z-10 pointer-events-none" />
-				<div className="absolute inset-y-0 right-0 w-16 bg-linear-to-l from-[#212121] to-transparent z-10 pointer-events-none" />
+				<div
+					className="absolute inset-y-0 left-0 w-16 z-10 pointer-events-none"
+					style={{
+						background:
+							'linear-gradient(to right, var(--card-bg), transparent)'
+					}}
+				/>
+				<div
+					className="absolute inset-y-0 right-0 w-16 z-10 pointer-events-none"
+					style={{
+						background:
+							'linear-gradient(to left, var(--card-bg), transparent)'
+					}}
+				/>
 
 				<div
 					className="flex gap-6 w-max will-change-transform group-hover:[animation-play-state:paused]"
