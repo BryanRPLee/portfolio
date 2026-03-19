@@ -18,6 +18,10 @@ const nextConfig: NextConfig = {
 				protocol: 'https',
 				hostname: 'cdn.jsdelivr.net',
 				pathname: '/gh/devicons/**'
+			},
+			{
+				protocol: 'https',
+				hostname: 'cdn.buymeacoffee.com'
 			}
 		]
 	}

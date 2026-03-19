@@ -3,6 +3,7 @@ import './globals.css'
 import { site } from '@/app/data/site'
 import Navigation from '@/app/components/Navigation'
 import ThemeToggle from '@/app/components/ThemeToggle'
+import BuyMeACoffee from '@/app/components/BuyMeACoffee'
 
 export const metadata: Metadata = {
 	title: site.name,
@@ -15,7 +16,7 @@ export default function RootLayout({
 	children: React.ReactNode
 }) {
 	return (
-		<html lang="en">
+		<html lang="en" suppressHydrationWarning>
 			<head>
 				<script
 					dangerouslySetInnerHTML={{
@@ -26,6 +27,7 @@ export default function RootLayout({
 			<body className="min-h-dvh bg-spotify-black text-white antialiased no-page-scrollbar overflow-x-hidden">
 				<Navigation />
 				{children}
+				<BuyMeACoffee />
 				<ThemeToggle />
 			</body>
 		</html>
