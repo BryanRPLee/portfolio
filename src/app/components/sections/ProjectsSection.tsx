@@ -13,7 +13,7 @@ export default function ProjectsSection() {
 					<ArrowDown className="w-4 h-4" strokeWidth={2.5} />
 				</div>
 				<a
-					href={`https://github.com/${projects[0]?.links?.[0]?.href.split('github.com/')[1]?.split('/')[0]}`}
+					href="https://github.com/BryanRPLee?tab=repositories"
 					target="_blank"
 					rel="noreferrer"
 					className="flex items-center gap-2 text-sm font-bold border border-[#727272] hover:border-white hover:bg-white hover:text-black text-white px-5 py-2 rounded-full transition-all hover:scale-105 animate-pulse hover:animate-none"

@@ -27,7 +27,6 @@ export default function Navigation() {
 								sizes="28px"
 								className="object-cover rounded-full"
 							/>
-							{/* Spotify logo overlay */}
 							<div className="absolute -bottom-1 -right-1 bg-[#1DB954] rounded-full w-3.5 h-3.5 flex items-center justify-center shadow-sm">
 								<svg
 									viewBox="0 0 24 24"
@@ -40,34 +39,6 @@ export default function Navigation() {
 						</div>
 						<span className="hidden sm:block">{site.name}</span>
 					</button>
-
-					<div className="hidden sm:flex items-center gap-4">
-						<a
-							href={`mailto:${site.email}`}
-							className="text-[#B3B3B3] hover:text-[#1DB954] transition-colors"
-							aria-label="Email"
-						>
-							<Mail className="w-5 h-5" />
-						</a>
-						<a
-							href={site.links.github}
-							target="_blank"
-							rel="noreferrer"
-							className="text-[#B3B3B3] hover:text-[#1DB954] transition-colors"
-							aria-label="GitHub"
-						>
-							<Github className="w-5 h-5" />
-						</a>
-						<a
-							href={site.links.linkedin}
-							target="_blank"
-							rel="noreferrer"
-							className="text-[#B3B3B3] hover:text-[#1DB954] transition-colors"
-							aria-label="LinkedIn"
-						>
-							<Linkedin className="w-5 h-5" />
-						</a>
-					</div>
 					<button
 						className="sm:hidden text-white"
 						onClick={() => setMobileOpen((p) => !p)}
