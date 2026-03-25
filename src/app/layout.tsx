@@ -4,7 +4,7 @@ import { site } from '@/app/data/site'
 import Navigation from '@/app/components/Navigation'
 import ThemeToggle from '@/app/components/ThemeToggle'
 import BuyMeACoffee from '@/app/components/BuyMeACoffee'
-import { Analytics } from '@vercel/analytics/react'
+import { Analytics } from '@vercel/analytics/next'
 
 export const metadata: Metadata = {
 	title: site.name,
