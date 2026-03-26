@@ -10,13 +10,13 @@ export default function Navigation() {
 
 	return (
 		<nav aria-label="Primary navigation" className="sticky top-0 z-50">
-			<div className="mx-4 mt-3 sm:mx-8 lg:mx-32">
-				<div className="flex items-center justify-between bg-[#212121] rounded-full px-4 py-2 shadow-lg">
+			<div className="mx-4 mt-3 sm:mx-8 lg:mx-12">
+				<div className="flex items-center justify-between rounded-full border border-white/10 bg-black/30 px-4 py-2 shadow-[0_18px_60px_rgba(0,0,0,0.22)] backdrop-blur-xl">
 					<button
 						onClick={() =>
 							window.scrollTo({ top: 0, behavior: 'smooth' })
 						}
-						className="flex items-center gap-2 text-white font-bold text-lg"
+						className="flex items-center gap-3 text-white"
 						aria-label="Scroll to top"
 					>
 						<div className="relative w-7 h-7 shrink-0">
@@ -27,7 +27,7 @@ export default function Navigation() {
 								sizes="28px"
 								className="object-cover rounded-full"
 							/>
-							<div className="absolute -bottom-1 -right-1 bg-[#1DB954] rounded-full w-3.5 h-3.5 flex items-center justify-center shadow-sm">
+							<div className="absolute -bottom-1 -right-1 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-[#1ed760] shadow-sm">
 								<svg
 									viewBox="0 0 24 24"
 									className="w-2.5 h-2.5 fill-black"
@@ -37,10 +37,43 @@ export default function Navigation() {
 								</svg>
 							</div>
 						</div>
-						<span className="hidden sm:block">{site.name}</span>
+						<div className="hidden min-w-0 sm:block">
+							<p className="font-display text-lg uppercase leading-none tracking-[0.12em] text-white">
+								{site.name}
+							</p>
+						</div>
 					</button>
+
+					<div className="hidden items-center gap-2 sm:flex">
+						<a
+							href={site.links.github}
+							target="_blank"
+							rel="noreferrer"
+							className="rounded-full border border-white/10 p-2 text-white/72 transition-colors hover:text-white"
+							aria-label="GitHub"
+						>
+							<Github className="h-4 w-4" />
+						</a>
+						<a
+							href={site.links.linkedin}
+							target="_blank"
+							rel="noreferrer"
+							className="rounded-full border border-white/10 p-2 text-white/72 transition-colors hover:text-white"
+							aria-label="LinkedIn"
+						>
+							<Linkedin className="h-4 w-4" />
+						</a>
+						<a
+							href={`mailto:${site.email}`}
+							className="rounded-full border border-white/10 p-2 text-white/72 transition-colors hover:text-white"
+							aria-label="Email"
+						>
+							<Mail className="h-4 w-4" />
+						</a>
+					</div>
+
 					<button
-						className="sm:hidden text-white"
+						className="text-white sm:hidden"
 						onClick={() => setMobileOpen((p) => !p)}
 						aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
 					>
@@ -52,10 +85,13 @@ export default function Navigation() {
 					</button>
 				</div>
 				{mobileOpen && (
-					<div className="mt-2 bg-[#212121] rounded-2xl px-6 py-4 flex flex-col gap-4 sm:hidden">
+					<div className="mt-2 flex flex-col gap-4 rounded-[1.75rem] border border-white/10 bg-black/35 px-6 py-5 backdrop-blur-xl sm:hidden">
+						<p className="text-xs uppercase tracking-[0.3em] text-white/45">
+							Swipe through the resume story.
+						</p>
 						<a
 							href={`mailto:${site.email}`}
-							className="flex items-center gap-2 text-[#B3B3B3] hover:text-[#1DB954]"
+							className="flex items-center gap-2 text-white/72 hover:text-[#1ed760]"
 						>
 							<Mail className="w-4 h-4" /> {site.email}
 						</a>
@@ -63,7 +99,7 @@ export default function Navigation() {
 							href={site.links.github}
 							target="_blank"
 							rel="noreferrer"
-							className="flex items-center gap-2 text-[#B3B3B3] hover:text-[#1DB954]"
+							className="flex items-center gap-2 text-white/72 hover:text-[#1ed760]"
 						>
 							<Github className="w-4 h-4" /> GitHub
 						</a>
@@ -71,7 +107,7 @@ export default function Navigation() {
 							href={site.links.linkedin}
 							target="_blank"
 							rel="noreferrer"
-							className="flex items-center gap-2 text-[#B3B3B3] hover:text-[#1DB954]"
+							className="flex items-center gap-2 text-white/72 hover:text-[#1ed760]"
 						>
 							<Linkedin className="w-4 h-4" /> LinkedIn
 						</a>

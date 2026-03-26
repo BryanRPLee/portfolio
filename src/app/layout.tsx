@@ -1,10 +1,22 @@
 import type { Metadata } from 'next'
+import { Archivo_Black, Space_Grotesk } from 'next/font/google'
 import './globals.css'
 import { site } from '@/app/data/site'
 import Navigation from '@/app/components/Navigation'
 import ThemeToggle from '@/app/components/ThemeToggle'
 import BuyMeACoffee from '@/app/components/BuyMeACoffee'
 import { Analytics } from '@vercel/analytics/next'
+
+const spaceGrotesk = Space_Grotesk({
+	subsets: ['latin'],
+	variable: '--font-space-grotesk'
+})
+
+const archivoBlack = Archivo_Black({
+	weight: '400',
+	subsets: ['latin'],
+	variable: '--font-archivo-black'
+})
 
 export const metadata: Metadata = {
 	title: site.name,
@@ -25,7 +37,9 @@ export default function RootLayout({
 					}}
 				/>
 			</head>
-			<body className="min-h-dvh bg-spotify-black text-white antialiased no-page-scrollbar overflow-x-hidden">
+			<body
+				className={`${spaceGrotesk.variable} ${archivoBlack.variable} min-h-dvh overflow-x-hidden antialiased no-page-scrollbar`}
+			>
 				<Navigation />
 				{children}
 				<BuyMeACoffee />

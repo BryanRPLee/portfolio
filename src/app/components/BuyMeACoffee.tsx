@@ -6,7 +6,7 @@ export default function BuyMeACoffee() {
 			href="https://buymeacoffee.com/bryanrplee"
 			target="_blank"
 			rel="noreferrer"
-			className="fixed bottom-20 right-6 z-50 bg-[#FFDD00] hover:bg-[#ffca2c] p-3 rounded-full shadow-xl transition-all duration-200 hover:scale-110"
+			className="fixed bottom-20 right-6 z-50 hidden rounded-full bg-[#FFDD00] p-3 shadow-xl transition-all duration-200 hover:scale-110 hover:bg-[#ffca2c] md:block"
 			aria-label="Buy me a coffee"
 		>
 			<Image
