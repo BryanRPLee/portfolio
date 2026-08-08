@@ -27,6 +27,11 @@ export default function EducationSection() {
 							<p className="text-xs text-[#B3B3B3] mt-0.5">
 								{ed.location} · {ed.start} – {ed.end}
 							</p>
+							{ed.gpa ? (
+								<p className="text-xs text-[#B3B3B3] mt-0.5">
+									GPA: {ed.gpa}
+								</p>
+							) : null}
 						</div>
 					))}
 				</div>

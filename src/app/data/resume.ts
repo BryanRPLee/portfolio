@@ -1,4 +1,4 @@
-import { Experience, Project } from './types'
+import { Education, Experience, Project } from './types'
 
 export const accomplishments = [
 	"Dean's List Recipient",
@@ -13,21 +13,24 @@ export const experience: Experience[] = [
 		start: 'Jan 2024',
 		end: 'Nov 2025',
 		highlights: [
-			'Logistics Analytics: delivered regional analytics tooling to enable cross-region benchmarking; built end-to-end features spanning SQL/data modeling, API integration, and Kibana visualizations.',
-			'Improved data quality and product resilience via validation, ingestion fixes, and stronger error-handling; supported internal stakeholders with iterative delivery.',
-			'BorderWise: migrated components to Vue, redesigned UI, reduced regressions, and improved maintainability with clearer patterns and documentation.',
-			'Business Intelligence: built a replication API route to surface audit/CDC records (SOQL/Kibana queries) and integrated CDC processing/validation into EDW pipelines to improve visibility and customer outcomes.',
+			'Joined straight out of high school on the Earn and Learn program, working full-time while starting a CS degree at UTS.',
+			'Built a region-level analytics platform (Vue.js, .NET, SQL, Kibana) to enable cross-region benchmarking for internal stakeholders.',
+			'Designed and delivered a Replication API (CDC to EDW) that replaced manual querying workflows, improving data visibility and turnaround for customer-facing teams.',
+			'Built end-to-end data pipelines (Python, SQL, REST APIs) to move and validate data across internal systems.',
+			'Contributed to the Product Warehouse Android app (Java), shipping features across the mobile client.',
+			'Used GitHub Copilot to accelerate day-to-day development.',
 			'Mentored ~60 new engineers during onboarding (Earn & Learn 2025), including technical training to accelerate ramp-up.'
 		],
 		skills: [
+			'Vue',
+			'.NET',
+			'SQL',
+			'Kibana',
+			'Python',
+			'REST APIs',
+			'Java',
 			'C++',
 			'Typescript',
-			'SQL',
-			'Vue',
-			'React',
-			'Xamarin',
-			'Enterprise Software',
-			'Software Infrastructure',
 			'Test Driven Development'
 		]
 	}
@@ -76,7 +79,7 @@ export const projects: Project[] = [
 	{
 		name: 'Bronny James Basketball IQ',
 		description:
-			"A data-science notebook that reverse-engineers CraftedNBA's Basketball IQ metric using adjusted box-plus-minus alongside box-score and advanced stats from the first 16 games of the season to rank NBA players by decision-making quality.",
+			"An ML/data-science model that quantifies spatial awareness and decision-making quality in NBA players, reverse-engineering CraftedNBA's Basketball IQ metric using adjusted box-plus-minus alongside box-score and advanced stats from the first 16 games of the season.",
 		skills: ['Python', 'Jupyter Notebook', 'Data Science'],
 		bullets: [
 			'Sourced and merged data from the NBA, ESPN, and RAPM APIs into a unified dataset.',
@@ -88,16 +91,42 @@ export const projects: Project[] = [
 				href: 'https://github.com/BryanRPLee/bronny-james-basketball-iq'
 			}
 		]
+	},
+	{
+		name: 'In-Flight Radar System',
+		description:
+			'A portable weather radar for small aircraft, combining an ESP32-based radar sweep with a Python cockpit display client for real-time weather data visualisation.',
+		skills: ['C++', 'Python', 'C'],
+		bullets: [
+			'ESP32 firmware drives a servo sweep, RF sampling, IMU updates, and GPS parsing, exposing the data over onboard HTTP endpoints.',
+			'Desktop Python client renders live sweep data from the radar or a demo feed for cockpit display testing.'
+		],
+		links: [
+			{
+				label: 'GitHub',
+				href: 'https://github.com/BryanRPLee/weather-radar'
+			}
+		]
+	},
+	{
+		name: 'FRC Team 4739 "Ctrl + F5"',
+		description:
+			'Robot control software (Java) for FIRST Robotics Competition, handling real-time control and hardware integration for the team\'s competition robot.',
+		skills: ['Java', 'Real-Time Systems', 'Hardware Integration'],
+		bullets: [
+			"Competed at FIRST Robotics Championship in Wollongong, 2023."
+		]
 	}
 ]
 
-export const education = [
+export const education: Education[] = [
 	{
 		school: 'University of Technology Sydney',
 		location: 'Sydney, Australia',
 		degree: 'Bachelor of Computer Science (IDEA)',
 		start: 'Jan 2024',
-		end: 'Nov 2026'
+		end: 'Nov 2026',
+		gpa: '6.42 / 7.0'
 	}
 ]
 export const training = [

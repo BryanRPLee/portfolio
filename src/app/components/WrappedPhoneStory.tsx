@@ -276,7 +276,14 @@ export default function WrappedPhoneStory() {
 		? getMonthSpan(topExperience.start, topExperience.end)
 		: null
 	const topGenres = buildGenreStats()
-	const featuredProjects = projects.slice(0, 3)
+	const featuredNames = [
+		'SpyGlass',
+		'In-Flight Radar System',
+		'FRC Team 4739 "Ctrl + F5"'
+	]
+	const featuredProjects = projects.filter((project) =>
+		featuredNames.includes(project.name)
+	)
 
 	const slides: StorySlide[] = [
 		{
@@ -384,13 +391,13 @@ export default function WrappedPhoneStory() {
 		{
 			id: 'impact-2',
 			theme: 'coral',
-			footer: 'BorderWise Replay',
+			footer: 'Replication API Replay',
 			content: (theme) => (
 				<div className="flex h-full flex-col justify-between">
 					<div className="grid grid-cols-2 gap-3">
 						<StatBlock
-							label="UI migration"
-							value="Vue"
+							label="CDC pipeline"
+							value="EDW"
 							theme={theme}
 						/>
 						<StatBlock
@@ -401,16 +408,15 @@ export default function WrappedPhoneStory() {
 					</div>
 					<div className="pb-16">
 						<p className="font-display text-[3rem] leading-[0.88] tracking-[-0.05em]">
-							You redesigned BorderWise and helped new engineers
-							ramp faster.
+							You designed a Replication API that replaced manual
+							querying for good.
 						</p>
 						<p
 							className="mt-4 max-w-60 text-sm leading-6"
 							style={{ color: theme.muted }}
 						>
-							Migrated components to Vue, reduced regressions, and
-							mentored roughly sixty engineers during Earn and
-							Learn onboarding.
+							Shipped CDC to EDW replication and mentored roughly
+							sixty engineers during Earn and Learn onboarding.
 						</p>
 					</div>
 				</div>

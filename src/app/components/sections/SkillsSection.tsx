@@ -3,19 +3,25 @@
 import Image from 'next/image'
 
 const skills = [
+	{ name: 'JavaScript', icon: 'javascript/javascript-original' },
 	{ name: 'TypeScript', icon: 'typescript/typescript-original' },
+	{ name: 'Python', icon: 'python/python-original' },
+	{ name: 'C', icon: 'c/c-original' },
+	{ name: 'C++', icon: 'cplusplus/cplusplus-original' },
+	{ name: 'C#', icon: 'csharp/csharp-original' },
+	{ name: 'Java', icon: 'java/java-original' },
+	{ name: 'Kotlin', icon: 'kotlin/kotlin-original' },
+	{ name: 'SQL', icon: 'postgresql/postgresql-original' },
 	{ name: 'React', icon: 'react/react-original' },
 	{ name: 'Vue', icon: 'vuejs/vuejs-original' },
 	{ name: 'Next.js', icon: 'nextjs/nextjs-original' },
-	{ name: 'C++', icon: 'cplusplus/cplusplus-original' },
-	{ name: 'C#', icon: 'csharp/csharp-original' },
-	{ name: 'SQL', icon: 'postgresql/postgresql-original' },
+	{ name: '.NET', icon: 'dot-net/dot-net-original' },
 	{ name: 'Node.js', icon: 'nodejs/nodejs-original' },
 	{ name: 'Docker', icon: 'docker/docker-original' },
 	{ name: 'Git', icon: 'git/git-original' },
+	{ name: 'Kibana', icon: 'elasticsearch/elasticsearch-original' },
 	{ name: 'Tailwind', icon: 'tailwindcss/tailwindcss-original' },
-	{ name: 'Figma', icon: 'figma/figma-original' },
-	{ name: 'Kibana', icon: 'elasticsearch/elasticsearch-original' }
+	{ name: 'Figma', icon: 'figma/figma-original' }
 ]
 
 const allSkills = [...skills, ...skills]

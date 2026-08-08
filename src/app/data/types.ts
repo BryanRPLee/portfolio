@@ -8,6 +8,15 @@ export type Experience = {
 	skills: string[]
 }
 
+export type Education = {
+	school: string
+	location: string
+	degree: string
+	start: string
+	end: string
+	gpa?: string
+}
+
 export type Project = {
 	name: string
 	description: string
